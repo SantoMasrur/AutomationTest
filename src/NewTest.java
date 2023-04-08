@@ -33,7 +33,8 @@ public class NewTest {
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//for new url waiting time
-        driver.get("https://chaldal.com/");
+        //driver.get("https://chaldal.com/");
+        driver.get("https://www.hyrtutorials.com/p/add-padding-to-containers.html");
         Thread.sleep(5000);//waits 5 seconds after first click
         driver.manage().window().maximize();//browser maximize{full screen}
         //Thread.sleep(5000);
@@ -48,23 +49,32 @@ public class NewTest {
 
         //////Home Work/////
 
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("Egg");//search for egg :)
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);//hit enter
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/section/p")).click();//add to carts
-        Thread.sleep(2000);
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("Egg");//search for egg :)
+        //Thread.sleep(2000);
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);//hit enter
+        //Thread.sleep(2000);
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/section/p")).click();//add to carts
+        //Thread.sleep(2000);
 
-        for(int i = 0; i < 4; i++ ) {
-            driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();//click "+" 5 times
-            Thread.sleep(2000);
-        }
+        //for(int i = 0; i < 4; i++ ) {
+            //driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();//click "+" 5 times
+            //Thread.sleep(2000);
+        //}
 
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/section/div[1]/p/span")).click();//checkout
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div[3]/div/div/button/span[1]")).click();//place order
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[5]/section/div/div/form/div[1]/div/div[1]/input")).sendKeys("01738912074");//add phone number
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/section/div[1]/p/span")).click();//checkout
+        //Thread.sleep(2000);
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div[3]/div/div/button/span[1]")).click();//place order
+        //Thread.sleep(2000);
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[5]/section/div/div/form/div[1]/div/div[1]/input")).sendKeys("01738912074");//add phone number
+
+        driver.findElement(By.xpath("//input[@name=\"name\"]/preceding-sibling::input[1]")).sendKeys("Masrur");
+        driver.findElement(By.xpath("//label[text()=\"First Name \"]/following-sibling::input[@name=\"name\"][2]")).sendKeys("Ahmed");
+        driver.findElement(By.xpath("//label[text()=\"Email\"]/following-sibling::input[1]")).sendKeys("santobd@gmail.com");
+        driver.findElement(By.xpath("//label[text()=\"Password\"]/following::input[1]")).sendKeys("password");
+        driver.findElement(By.xpath("//label[text()=\"Repeat Password\"]/following::input[1]")).sendKeys("password");
+
+
+
 
 
 
